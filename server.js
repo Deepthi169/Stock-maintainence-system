@@ -1,10 +1,19 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const app = express();
 const port = 3000;
 
 app.use(cors());
 app.use(express.json());
+
+// serve static HTML/JS files from the project root
+app.use(express.static(path.join(__dirname)));
+
+// optional default route for “/”
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'home.html'));
+});
 
 let users = [];
 let stock = {
@@ -53,6 +62,11 @@ app.post('/sell', (req, res) => {
   res.json({ alert, recommendation });
 });
 
-app.listen(port, () => {
+// start the server using the port constant so you only need to change it in one place
+app.listen(port, (err) => {
+  if (err) {
+    console.error('Failed to start server:', err);
+    process.exit(1);
+  }
   console.log(`Server running on http://localhost:${port}`);
 });
