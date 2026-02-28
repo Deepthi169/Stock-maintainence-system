@@ -128,7 +128,7 @@ The system includes:
 
 ## 🚀 How to Run the Project
 
-1. Install dependencies:
+1.Install dependencies:
    ```bash
    npm install
    ```
