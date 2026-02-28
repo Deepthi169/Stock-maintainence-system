@@ -54,8 +54,6 @@ The system includes:
 - Node.js
 - Express.js
 
-### Database
-- (Add your database here: MongoDB / MySQL / etc.)
 
 ---
 
@@ -139,12 +137,12 @@ The system includes:
    npm start
    ```
 3.Open your browser and visit:
-```bash
-http://localhost:3000
-```
+  ```bash
+  http://localhost:3000
+  ```
 ---
 
-##🔮 Future Enhancements
+## 🔮 Future Enhancements
 
 🤖 AI-based demand forecasting
 📊 Advanced analytics dashboard
@@ -154,6 +152,6 @@ http://localhost:3000
 
 ---
 
-##📄 License
+## 📄 License
 This project is developed for academic and educational purposes.
    
