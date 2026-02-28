@@ -1,49 +1,156 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stock Maintenance System - Home</title>
-<style>
-body {
-font-family: 'Arial', sans-serif;
-background-color: #f4f7fc;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-margin: 0;
-flex-direction: column;
-text-align: center;
-}
-h1 {
-font-size: 36px;
-color: #333;
-margin-bottom: 20px;
-}
-a {
-font-size: 18px;
-color: #1d8fe5;
-text-decoration: none;
-padding: 10px 20px;
-border: 2px solid #1d8fe5;
-border-radius: 25px;
-margin: 10px;
-transition: background-color 0.3s, color 0.3s;
-}
-a:hover {
-background-color: #1d8fe5;
-color: white;
-}
-.container {
-text-align: center;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Dashboard</title>
+
+  <!-- Styles -->
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7fc;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+
+    /* Title Styling */
+    h2 {
+      color: #2c3e50;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: #34495e;
+      font-size: 22px;
+      margin-top: 30px;
+    }
+
+    /* Stock List Styling */
+    #stockList {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 40px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    #stockList li {
+      background-color: #fff;
+      margin: 10px 0;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      font-size: 18px;
+      color: #333;
+      text-align: left;
+    }
+
+    /* Form Styling */
+    #sellForm {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 400px;
+      width: 90%;
+      gap: 15px;
+    }
+
+    #sellForm input {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      color: #2c3e50;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+    #sellForm input:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    #sellForm button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1d8fe5;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #sellForm button:hover {
+      background-color: #147cc0;
+    }
+
+    /* Logout link styled like a button */
+    #sellForm a {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #e74c3c;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      margin-top: 10px;
+      font-size: 15px;
+      transition: background-color 0.3s;
+    }
+
+    #sellForm a:hover {
+      background-color: #c0392b;
+    }
+
+    /* Alerts */
+    #alertMessage {
+      color: #e74c3c;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    #recommendation {
+      color: #2ecc71;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
+
 <body>
-<div class="container">
-<h1>Welcome to Stock Maintenance System</h1>
-<a href="login.html">Login</a> | <a href="signup.html">Sign Up</a>
-</div>
+  <h2>Available Stock</h2>
+  <ul id="stockList">
+    <!-- Dynamically generated stock items will appear here -->
+  </ul>
+
+  <h3>Enter Sold Products</h3>
+  <form id="sellForm">
+    <input type="text" id="product" placeholder="Product Name" required>
+    <input type="number" id="quantity" placeholder="Quantity Sold" required>
+    <button type="submit">Submit</button>
+    <a href="logout.html">Logout</a>
+  </form>
+
+  <h3 id="alertMessage"></h3>
+  <h3 id="recommendation"></h3>
+
+  <!-- JavaScript -->
+  <script src="home.js"></script>
 </body>
 </html>

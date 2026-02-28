@@ -1,77 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sign Up - Stock Maintenance System</title>
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f4f7fc;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-margin: 0;
-}
-.signup-container {
-background-color: white;
-padding: 40px;
-border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-width: 100%;
-max-width: 400px;
-text-align: center;
-}
-h2 {
-margin-bottom: 20px;
-font-size: 24px;
-color: #333;
-}
-.form-group {
-margin-bottom: 20px;
-}
-.form-group input {
-width: 100%;
-padding: 12px;
-border-radius: 25px;
-border: 1px solid #ddd;
-font-size: 16px;
-color: #333;
-}
-.form-group button {
-width: 100%;
-padding: 12px;
-background-color: rgb(29, 166, 229);
-color: white;
-font-size: 16px;
-border: none;
-border-radius: 25px;
-cursor: pointer;
-transition: background-color 0.3s ease;
-}
-.form-group button:hover {
-background-color: rgb(24, 130, 184);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Stock Maintenance System</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Centering the sign-up form */
+        .signup-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Form group styling */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Sign Up button styling */
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: rgb(29, 166, 229);
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for the sign-up button */
+        .form-group button:hover {
+            background-color: rgb(24, 130, 184);
+        }
+    </style>
 </head>
 <body>
+
 <div class="signup-container">
-<h2>Sign Up</h2>
-<form id="signupForm">
-<!-- Username Field -->
-<div class="form-group">
-<input type="text" placeholder="Username" id="username" required>
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+        <!-- Username Field -->
+        <div class="form-group">
+            <input type="text" placeholder="Username" id="username" required>
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+            <input type="password" placeholder="Password" id="password" required>
+        </div>
+       
+
+        <!-- Sign Up Button -->
+        <div class="form-group">
+            <button type="submit">Sign Up</button>
+        </div>
+    </form>
 </div>
-<!-- Password Field -->
-<div class="form-group">
-<input type="password" placeholder="Password" id="password" required>
-</div>
-<div class="form-group">
-<button type="submit">Sign Up</button>
-</div>
-</form>
-</div>
+
 <script src="signup.js"></script>
 </body>
 </html>
