@@ -24,7 +24,8 @@ let stock = {
   "Milk":25,
   "Bread":20,
   "Jam":10,
-  "Cookies":100
+  "Cookies":100,
+  "Biscuits":80
 };
 let sold = {};
 
